@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { BidiModule } from '@angular/cdk/bidi';
+import { Balance } from "./components/balance/balance";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [BidiModule, Balance],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
+
+  transactions = signal([
+    { value: 100, type: 'income' },
+    { value: 50, type: 'income' },
+    { value: 50, type: 'outcome' },
+    { value: 25, type: 'outcome' },
+  ]);
+
 
 }
