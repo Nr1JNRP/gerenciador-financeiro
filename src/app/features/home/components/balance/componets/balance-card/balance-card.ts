@@ -2,7 +2,7 @@ import { Component, computed, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
-type CardType = 'income' | 'outcome';
+type CardType = 'income' | 'outcome' | 'balance';
 
 enum ValueCssClass {
   income = 'income',
